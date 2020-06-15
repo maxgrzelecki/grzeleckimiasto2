@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Los Angeles | Ankieta</title>
+        <meta charset="utf-8">
+		<link rel="shortcut icon" href="foto/flaga.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style2.css"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+		<button onclick="window.scrollTo(0,0);" id="guzik" style="display: block;">Do góry</button>
+		<button onclick="window.scrollTo(0,4000);" id="guzik2" style="display: block;">Do dołu</button>
+        <div class="content">
+            <div class="header">
+                Los Angeles
+				<a href="index.html"><img src="foto/stempel.png" width="5%" height="5%" alt="logo" ></a>
+            </div>
+			<div class="topnav" id="myTopnav">
+  <a href="index.html">Strona Główna</a>
+  <a href="galeria.html">Galeria i media</a>
+  <a href="mapa.html">Mapa</a>
+  <a href="warto.html">Warto zobaczyć</a>
+  <a href="ankieta.html" class="active">Ankieta</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+            <div class="container">
+				
+			<h1  class="napis">Ankieta</h1>
+			<form action="mailto:grzelecmax@gmail.com" method="post" enctype="text/plain" style="ankieta"> 
+
+               Wybierz swoją płeć. <br>
+
+               <input type="radio" id="male" name="gender" value="male"> 
+
+                <label for="male">Mężczyzna</label><br> 
+
+                <input type="radio" id="female" name="gender" value="female"> 
+
+                <label for="female">Kobieta</label><br> 
+
+                <input type="radio" id="different" name="gender" value="different"> 
+
+                <label for="different">Inna<label><br> 
+
+                Czy byłeś/aś kiedyś w Los Angeles? <br>
+				
+
+                <input type="radio" name="odpowiedz1" value="tak">Tak<br> 
+
+                <input type="radio" name="odpowiedz1" value="tak">Nie<br> 
+
+                
+
+                 
+
+                Jeśli "NIE" to co byś chciał/a zobaczyć najbardziej? <br>
+
+                
+
+                <input type="checkbox" name="miejsce" value="arab">Venice Beach<br> 
+
+                <input type="checkbox" name="miejsce" value="chalifa">Beverly Hills<br> 
+
+                <input type="checkbox" name="miejsce" value="bay">Hollywood<br> 
+
+                <input type="checkbox" name="miejsce" value="marina">Universal Studios<br> 
+
+                <input type="checkbox" name="miejsce" value="waterfront">Inne miejsce<br> 
+
+            
+
+                Jeśli "TAK" to napisz jak Ci się podobało.  <br>
+
+                <textarea name="Komentarz" cols="30%" rows="10%">...</textarea> 
+
+                <br><br><br><br><br> 
+
+                <p style="text-align: center;"> 
+
+                <input type="submit" value="Wyślij formularz"> 
+
+                <input type="reset" value="Wyczyść dane"></p> 
+
+            </form> 
+			
+            </div>
+			<div class="footer">
+                Maksymilian Grzelecki 2TA
+            </div>
+        </div>
+    </body>
+</html>

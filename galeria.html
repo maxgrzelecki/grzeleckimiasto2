@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Los Angeles | Galeria</title>
+        <meta charset="utf-8">
+		<link rel="shortcut icon" href="foto/flaga.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style2.css"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+		<button onclick="window.scrollTo(0,0);" id="guzik" style="display: block;">Do góry</button>
+		<button onclick="window.scrollTo(0,4000);" id="guzik2" style="display: block;">Do dołu</button>
+        <div class="content">
+            <div class="header">
+                Los Angeles
+				<a href="index.html"><img src="foto/stempel.png" width="5%" height="5%" alt="logo" ></a>
+            </div>
+			<div class="topnav" id="myTopnav">
+  <a href="index.html">Strona Główna</a>
+  <a href="galeria.html" class="active">Galeria i media</a>
+  <a href="mapa.html">Mapa</a>
+  <a href="warto.html">Warto zobaczyć</a>
+  <a href="ankieta.html">Ankieta</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+            <div class="container">
+				
+			<h1  class="napis">Galeria</h1>
+			<br>
+			<br>
+			</div>
+						<div class="cont">
+							<div class="mySlides">
+								<img src="foto/1.jpg" style="width:80%">
+							</div>
+							<div class="mySlides">
+								<img src="foto/1a.jpg" style="width:80%">
+							</div>
+							<div class="mySlides">
+								<img src="foto/1b.jpg" style="width:80%">
+							</div>
+							<div class="mySlides">
+								<img src="foto/1c.jpg" style="width:80%">
+							</div>
+							<div class="mySlides">
+								<img src="foto/1d.jpg" style="width:80%">
+							</div>
+							<div class="mySlides">
+								<img src="foto/1e.jpg" style="width:80%">
+							</div>
+							<div class="mySlides">
+								<img src="foto/1f.jpg" style="width:80%">
+							</div>
+						</div>
+						<div style="margin: 2%;">
+							<a class="prev" onclick="plusSlides(-1)">❮</a>
+							<a class="next" onclick="plusSlides(1)">❯</a>
+						</div>
+					<script>
+					  var slideIndex = 1;
+					  showSlides(slideIndex);
+					  function plusSlides(n) {
+						showSlides(slideIndex += n);
+					  }
+					  function currentSlide(n) {
+						showSlides(slideIndex = n);
+					  }
+					  function showSlides(n) {
+						var i;
+						var slides = document.getElementsByClassName("mySlides");
+						var dots = document.getElementsByClassName("demo");
+						var captionText = document.getElementById("caption");
+						if (n > slides.length) {slideIndex = 1}
+						if (n < 1) {slideIndex = slides.length}
+						for (i = 0; i < slides.length; i++) {
+						  slides[i].style.display = "none";
+						}
+						for (i = 0; i < dots.length; i++) {
+						  dots[i].className = dots[i].className.replace(" active", "");
+						}
+						slides[slideIndex-1].style.display = "block";
+						dots[slideIndex-1].className += " active";
+						captionText.innerHTML = dots[slideIndex-1].alt;
+					  }
+					</script>
+					<h1 class="napis" id="film">Film z LA</h1>
+					<iframe width="80%" src="https://www.youtube.com/embed/5cMNsW8_30A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br>
+					<br>
+					<h1 class="napis" id="hymn">Hymn USA</h1>
+					<audio src="media/hymn.mp3" id="audio" controls ></audio>
+			<div class="footer">
+                Maksymilian Grzelecki 2TA
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
